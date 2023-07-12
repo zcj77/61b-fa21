@@ -1,0 +1,20 @@
+Q: Is one sorting algorithm always faster than another?
+A: Not always, but for the most part it is. Looking at the graph, wipingBubbleSorter starts out slower for a tiny bit but ends up faster than BubbleSorter.
+
+Q: Above we said that BubbleSort, WipingBubbleSort, and InsertionSort each had the same Theta(N^2) asymptotic time complexity. How can you explain the differences in the plots for these three algorithms?
+A: Even though the worst case for each of these methods are the same, the best case is different. For example, bubbleSort checks 2 spots and swaps them if they're in wrong order, and insertionSort transfers 1 element at a time.
+
+Q: What information can we gain from empirical analysis of algorithms which might not be as noticeable in asymptotical bounds?
+A: Asymptotical bounds tells us only the values it may approach, and not reach it. So empirical analysis of algorithms might help us gain this information.
+
+Q: For any given sorting algorithm, does increasing the array size always mean the sorting takes longer?
+A: For the most part, yes because that means that you have to run the code more times, resulting in more time being consumed.
+
+Q: How does changing nrepeats change the plot?
+A: It makes microseconds bigger because there's more times that you have to repeat so it will take longer.
+
+Q: Is your plot the exact same as your partner's plot, even with the same values of ntrials, by, and nrepeats?
+A: Not sure, didn't work with a partner, but I assume that it's the same if it has the same values of ntrials and nrepeats.
+
+Q: Optional: Look at the source code for BubbleSorter to WipingBubbleSorter. After looking at the plots, can you intuitively explain why WipingBubbleSorter is usually 2x as fast as BubbleSorter? (Hint: Consider the immobility of some elements when the swapping passes are single directional (i.e. only going forward), and how this "Wiping" strategy helps deal with that issue.) Can you come up with an example that shows the difference in runtime?
+A:

@@ -1,0 +1,20 @@
+Q: Is one GrowList implementation always better than the others?
+A: Because for the most part it is faster to do.
+
+Q: Why is the runtime for N insertions into a geometrically resizing list a Theta(N) operation?
+A: Because when the array is increased geometrically, the number of insertions in ammortized Theta(1).
+
+Q: Why is the runtime for N insertions into a arithmetically resizing list a Theta(N^2) operation?
+A: Because when the array is increased arithmetically, the number of insertions in ammortized Theta(1/sqrt(N)).
+
+Q: How does the runtime per operation for the ArithGrowList compare to that of GeomGrowList and JavaGrowList? Specifically look at the non-accumulated plots and desribe the trends for how long each operation takes as a function of how many elements have already been inserted in the list.
+A: The ArithGrowthList has a longer runtime the bigger the array. For around every 100 N insertions, it will spike in runtime and then go back to the normal increasing trend.
+
+Q: When are there spikes in the per operation runtime graphs for each of the implementations? Do these make sense to you? Hint: some of these should and others might not. Empirical runtime can be quite messy and depends on machine specifics which will be revealed in other subsequent classes like CS61C.
+A: Every 100 N insertions, the ArithGrowthList will spike in runtime, whereas the other 2 have some sort of a spike around every double, so there's a spike near 250, then 500. Some of these makes sense to me.
+
+Q: Optional: Try changing the code for GeomGrowList to resize by a different factor. How does this effect the theoretical asymptotic runtime? How does this effect the plotted runtime?
+A:
+
+Q: Optional: Try changing the code for ArithGrowList to resize by adding a different fixed number of spots in the array. How does this effect the theoretical asymptotic runtime? How does this effect the plotted runtime?
+A:
